@@ -1,0 +1,25 @@
+import java.util.List;
+import java.util.NoSuchElementException;
+
+public class ReverseLibraryIterator implements Iterator<Book> {
+    private final List<Book> books;
+    private int position;
+
+    public ReverseLibraryIterator(List<Book> books) {
+        this.books = books;
+        this.position = books.size() - 1;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return position >= 0;
+    }
+
+    @Override
+    public Book next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        return books.get(position--);
+    }
+}
