@@ -21,8 +21,8 @@ public class IdleState extends State {
         vendingMachine.setVendingMachineState(new HasMoneyState());
     }
 
-    @Override
-    public void updateInventory(VendingMachine vendingMachine, Item item, int code) throws Exception{
-        vendingMachine.getInventory().addItem(item,code);
-    }
+//    @Override
+//    public void updateInventory(VendingMachine vendingMachine, Item item, int code) throws Exception{
+//        vendingMachine.getInventory().addItem(item,code);
+//    }
 }
